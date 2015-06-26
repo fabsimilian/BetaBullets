@@ -4,14 +4,16 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
-    <!-- Parse permissions -->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
 
+    <!--
+      IMPORTANT: Change "com.parse.starter.permission.C2D_MESSAGE" in the lines below
+      to match your app's package name + ".permission.C2D_MESSAGE".
+    -->
     <permission android:protectionLevel="signature"
                 android:name="com.fabsimilian.betabullets.permission.C2D_MESSAGE" />
     <uses-permission android:name="com.fabsimilian.betabullets.permission.C2D_MESSAGE" />
@@ -40,7 +42,7 @@
             </intent-filter>
         </receiver>
         <!--Change here to custom pushReceiver-->
-        <receiver android:name="com.parse.ParsePushBroadcastReceiver"
+        <receiver android:name="com.fabsimilian.betabullets.push.BetaBulletsPushReceiver"
                   android:exported="false">
             <intent-filter>
                 <action android:name="com.parse.push.intent.RECEIVE" />

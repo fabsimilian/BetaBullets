@@ -2,4 +2,6 @@
     <string name="app_name">BetaBullets</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+
+    <string name="register">Gerät registrieren</string>
 </resources>
